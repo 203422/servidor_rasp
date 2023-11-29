@@ -4,6 +4,8 @@ const { Server } = require('socket.io');
 const { SerialPort, ReadlineParser } = require('serialport');
 const ioClient = require('socket.io-client');
 
+require("dotenv").config();
+
 const port = process.env.PORT || 5000;
 const app = express();
 const server = createServer(app);
@@ -44,7 +46,7 @@ const getAndSubmitData = () => {
     // io.emit('data-clients', data);
 };
 
-getAndSubmitData();
+getAndSubmitData()
 // simulateSensorData();
 
 // socketPrincipal.on('enviar-datos', (data) => {
