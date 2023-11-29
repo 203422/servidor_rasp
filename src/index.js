@@ -1,7 +1,7 @@
 const express = require('express');
 const { createServer } = require('http');
 const { Server } = require('socket.io');
-const { SerialPort, ReadlineParser } = require('serialport');
+// const { SerialPort, ReadlineParser } = require('serialport');
 const ioClient = require('socket.io-client');
 
 require("dotenv").config();
@@ -27,20 +27,20 @@ server.listen(port, () => {
 
 const getAndSubmitData = () => {
 
-    const port = new SerialPort({ path: '/dev/ttyACM0', baudRate: 9600 })
-    const parser = new ReadlineParser()
+    // const port = new SerialPort({ path: '/dev/ttyACM0', baudRate: 9600 })
+    // const parser = new ReadlineParser()
 
-    port.pipe(parser);
+    // port.pipe(parser);
 
-    parser.on('open', function () {
-        console.log('connection is opened');
-    });
+    // parser.on('open', function () {
+    //     console.log('connection is opened');
+    // });
 
-    parser.on('data', (data) => {
+    // parser.on('data', (data) => {
         // Enviar datos a la API
-        console.log(data);
-        socketPrincipal.emit('data-to-api', data);
-    })
+        // console.log(data);
+        socketPrincipal.emit('data-to-api', 'hola');
+    // })
 
     // Emitir a clientes conectados si es necesario
     // io.emit('data-clients', data);
