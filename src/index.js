@@ -27,7 +27,7 @@ server.listen(port, () => {
 
 const getAndSubmitData = () => {
 
-    const port = new SerialPort({ path: '/dev/ttyACM1', baudRate: 9600 })
+    const port = new SerialPort({ path: '/dev/ttyACM0', baudRate: 9600 })
     const parser = new ReadlineParser()
 
     port.pipe(parser);
