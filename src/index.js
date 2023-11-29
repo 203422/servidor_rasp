@@ -37,7 +37,7 @@ const getAndSubmitData = () => {
     parser.on('data', (data) => {
         // Enviar datos a la API
         console.log(data);
-        // socketPrincipal.emit('data-to-api', data);
+        socketPrincipal.emit('data-to-api', data);
     })
 
     // Emitir a clientes conectados si es necesario
