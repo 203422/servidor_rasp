@@ -15,7 +15,7 @@ const io = new Server(server, {
     }
 });
 
-const socketPrincipal = ioClient(process.env.API_URL);
+const socketPrincipal = ioClient('http://localhost:3000');
 
 io.on('connection', (socket) => {
     console.log('Usuario conectado');
