@@ -15,7 +15,7 @@ const io = new Server(server, {
     }
 });
 
-const socketPrincipal = ioClient('http://localhost:3000');
+const socketPrincipal = ioClient('http://192.168.56.1:3000');
 
 io.on('connection', (socket) => {
     console.log('Usuario conectado');
