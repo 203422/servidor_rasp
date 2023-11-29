@@ -47,30 +47,3 @@ const getAndSubmitData = () => {
 };
 
 getAndSubmitData()
-// simulateSensorData();
-
-// socketPrincipal.on('enviar-datos', (data) => {
-//     console.log('Recibido desde el servidor principal local:', data);
-// });
-
-// function getRandomArbitrary(min, max) {
-//     return Math.random() * (max - min) + min;
-// }
-
-// function getRandomChoice(choices) {
-//     const randomIndex = Math.floor(Math.random() * choices.length);
-//     return choices[randomIndex];
-// }
-
-// function simulateSensorData() {
-//     const nivelAgua = getRandomArbitrary(0, 200);
-//     const temperaturaAgua = getRandomArbitrary(20, 30);
-//     const lluvia = 9600;
-//     const ph = getRandomArbitrary(6.0, 8.0);
-//     const actuadorCloro = getRandomChoice(["Activo", "Inactivo"]);
-
-//     getAndSubmitData({ nivelAgua, temperaturaAgua, lluvia, ph });
-// }
-
-// setInterval(simulateSensorData, 5000);
-
