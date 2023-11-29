@@ -15,7 +15,7 @@ const io = new Server(server, {
     }
 });
 
-const socketPrincipal = ioClient('http://192.168.1.129:3000');
+const socketPrincipal = ioClient(process.env.API_URL);
 
 io.on('connection', (socket) => {
     console.log('Usuario conectado');
@@ -41,9 +41,6 @@ const getAndSubmitData = () => {
         console.log(data);
         socketPrincipal.emit('data-to-api', data);
     })
-
-    // Emitir a clientes conectados si es necesario
-    // io.emit('data-clients', data);
 };
 
 getAndSubmitData()
