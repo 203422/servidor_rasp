@@ -37,6 +37,7 @@ const getAndSubmitData = () => {
     });
 
     parser.on('data', (data) => {
+        console.log(data);
         // Enviar datos a la API
         socketPrincipal.emit('data-to-api', data);
     })
